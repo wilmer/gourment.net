@@ -1,0 +1,15 @@
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\PCE.Cocina.ViewModel.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\PCE.Cocina.ViewModel.pdb
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\obj\Debug\PCE.Cocina.ViewModel.csprojResolveAssemblyReference.cache
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\obj\Debug\PCE.Cocina.ViewModel.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\obj\Debug\PCE.Cocina.ViewModel.pdb
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\PCM.Cocina.DataAccess.Lib.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\PCM.Cocina.DataAccess.Model.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\PCM.Cocina.DataAccess.Lib.pdb
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\PCM.Cocina.DataAccess.Model.pdb
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\System.Web.Mvc.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCE.Cocina.ViewModel\bin\Debug\System.Web.Mvc.xml

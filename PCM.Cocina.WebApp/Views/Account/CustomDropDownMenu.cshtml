@@ -1,0 +1,55 @@
+﻿@model List<string>
+
+<div class="btn-group text-right" role="group">
+    <div class="btn-group" role="group">
+        <button class=" btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="cLabel">
+            <span class="fa fa-navicon"> </span> Menú
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="cLabel">
+
+
+            <li class="dropdown-submenu" data-menucode="SNSPROSYN_SIN">
+                <a tabindex="-1" href="#"><span><i class="fa fa-ambulance"></i> Gestión de Siniestros</span></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    {
+                    <li data-menucode="SNSPROSYN_SIN01">
+                        <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-search"></i> Buscar</a>
+                    </li>
+
+                    <li data-menucode="SNSPROSYN_SIN02">
+                        <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-file-o"></i> Nuevo sin poliza</a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="dropdown-submenu" data-menucode="SNSPROSYN_REP">
+                <a tabindex="-1" href="#"><span><i class="fa fa-newspaper-o"></i> Reportes</span></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li data-menucode="">
+                        <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-search"></i> Reporte General</a>
+                    </li>
+                    <li data-menucode="">
+                        <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-search"></i> Reporte Personalizado</a>
+                    </li>
+                </ul>
+            </li>
+
+
+            <li class="dropdown-submenu" data-menucode="SNSPROSYN_CFL">
+                <a href="#"><i class="fa fa-gears"></i> Control de flujo</a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+
+                    <li data-menucode="SNSPROSYN_CFL01">
+                        <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-gear"></i> Control de flujo</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
+            </li>
+        </ul>
+    </div>
+</div>

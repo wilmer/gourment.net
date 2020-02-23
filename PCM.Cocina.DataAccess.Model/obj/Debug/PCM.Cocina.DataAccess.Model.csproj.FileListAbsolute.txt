@@ -1,0 +1,7 @@
+D:\TESIS\Programa\PCM.Cocina.Web\PCM.Cocina.DataAccess.Model\bin\Debug\PCM.Cocina.DataAccess.Model.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCM.Cocina.DataAccess.Model\bin\Debug\PCM.Cocina.DataAccess.Model.pdb
+D:\TESIS\Programa\PCM.Cocina.Web\PCM.Cocina.DataAccess.Model\bin\Debug\Newtonsoft.Json.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCM.Cocina.DataAccess.Model\bin\Debug\Newtonsoft.Json.xml
+D:\TESIS\Programa\PCM.Cocina.Web\PCM.Cocina.DataAccess.Model\obj\Debug\PCM.Cocina.DataAccess.Model.dll
+D:\TESIS\Programa\PCM.Cocina.Web\PCM.Cocina.DataAccess.Model\obj\Debug\PCM.Cocina.DataAccess.Model.pdb
+D:\TESIS\Programa\PCM.Cocina.Web\PCM.Cocina.DataAccess.Model\obj\Debug\PCM.Cocina.DataAccess.Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,63 @@
+﻿@model PCE.Cocina.ViewModel.ViewModels.PedidoDTO.PedidoDTO
+<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+
+
+@*<h5>Detalle de Comprobante</h5>*@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div id="messageRegistroMenu">
+        </div>
+        <div class="form-horizontal">
+            <div id="dori-alert"></div>
+            <form id="frmInsertarDetalle" action="#">
+                <div>
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(model => model.CodigoPedido)
+                    @Html.HiddenFor(model => model.CodigoPedido, new { id = "CodigoMenu", @class = "form-control", @readonly = "readonly" })
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Cantidad:</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(model => model.Cantidad, new { @class = "form-control certi-limpiar", @id = "Cantidad" })
+                            @Html.ValidationMessageFor(model => model.Cantidad)
+
+                        </div>
+                        @*<div id="id-copy-consultar-ruc">
+                                <div class="col-sm-1">
+                                    <span class="input-group-btn" id="copy-consultar-ruc" style="z-index: 0;">
+                                        <button class="btn btn-sm " type="button" id="aseg-copy" title="">
+                                            <i></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>*@
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Menu:</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(model => model.CodigoMenu, Model.ListaCodigoMenu, "Seleccione una entrada", new { @class = "form-control", @id = "cbMenu" })
+                        </div>
+                        
+
+                    </div>
+  
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //$(document).ready(function () {
+    //    $('#newFileButton').hide();
+    //    $('#id').hide();
+
+    //    if ($('#Fecha').val() == "") {
+    //        var alert = GenerateAlert("danger", "Si desea agregar un archivo debe ingresar una fecha de Entrega en el documento");
+    //        $('#messageEditarDocumento').empty();
+    //        $('#messageEditarDocumento').append(alert);
+    //    }
+    //})
+</script>

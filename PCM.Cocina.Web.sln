@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccessLayer", "DataAccessLayer", "{E8531643-0307-4499-917D-132C0B2301EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentacion", "Presentacion", "{D3C93D0F-A708-40D4-AC5B-01F86CA2C8DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLaYER", "ServiceLaYER", "{D809EEB7-006C-4803-9D85-CDA071902CF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCM.Cocina.DataAccess.Lib", "PCM.Cocina.DataAccess.Lib\PCM.Cocina.DataAccess.Lib.csproj", "{C2E7EAB7-D4BC-43BE-9A39-F047DAE6BDCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCM.Cocina.DataAccess.Model", "PCM.Cocina.DataAccess.Model\PCM.Cocina.DataAccess.Model.csproj", "{E5A02165-6A81-4228-8833-FA03B5FC94E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCE.Cocina.Service.Lib", "PCE.Cocina.Service.Lib\PCE.Cocina.Service.Lib.csproj", "{A51E1456-2923-42A4-B5FC-24592A611341}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCE.Cocina.ViewModel", "PCE.Cocina.ViewModel\PCE.Cocina.ViewModel.csproj", "{A092B245-4AAC-40B9-AAA3-8AA8B1DEEF3F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCM.Cocina.WebApp3", "PCM.Cocina.WebApp3\PCM.Cocina.WebApp3.csproj", "{74AFF3C9-BAB7-43EF-BD90-FE2A030429D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2E7EAB7-D4BC-43BE-9A39-F047DAE6BDCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E7EAB7-D4BC-43BE-9A39-F047DAE6BDCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E7EAB7-D4BC-43BE-9A39-F047DAE6BDCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E7EAB7-D4BC-43BE-9A39-F047DAE6BDCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5A02165-6A81-4228-8833-FA03B5FC94E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5A02165-6A81-4228-8833-FA03B5FC94E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5A02165-6A81-4228-8833-FA03B5FC94E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5A02165-6A81-4228-8833-FA03B5FC94E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A51E1456-2923-42A4-B5FC-24592A611341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A51E1456-2923-42A4-B5FC-24592A611341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A51E1456-2923-42A4-B5FC-24592A611341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A51E1456-2923-42A4-B5FC-24592A611341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A092B245-4AAC-40B9-AAA3-8AA8B1DEEF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A092B245-4AAC-40B9-AAA3-8AA8B1DEEF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A092B245-4AAC-40B9-AAA3-8AA8B1DEEF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A092B245-4AAC-40B9-AAA3-8AA8B1DEEF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74AFF3C9-BAB7-43EF-BD90-FE2A030429D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74AFF3C9-BAB7-43EF-BD90-FE2A030429D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74AFF3C9-BAB7-43EF-BD90-FE2A030429D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74AFF3C9-BAB7-43EF-BD90-FE2A030429D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C2E7EAB7-D4BC-43BE-9A39-F047DAE6BDCB} = {E8531643-0307-4499-917D-132C0B2301EB}
+		{E5A02165-6A81-4228-8833-FA03B5FC94E7} = {E8531643-0307-4499-917D-132C0B2301EB}
+		{A51E1456-2923-42A4-B5FC-24592A611341} = {D809EEB7-006C-4803-9D85-CDA071902CF6}
+		{A092B245-4AAC-40B9-AAA3-8AA8B1DEEF3F} = {D809EEB7-006C-4803-9D85-CDA071902CF6}
+		{74AFF3C9-BAB7-43EF-BD90-FE2A030429D4} = {D3C93D0F-A708-40D4-AC5B-01F86CA2C8DD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal

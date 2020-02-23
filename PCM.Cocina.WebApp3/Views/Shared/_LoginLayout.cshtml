@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    @Styles.Render("~/Content/bbootstrap")
+    @Styles.Render("~/Content/fontawesome")
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="color: white; background-color: #940930; ">
+            <div class="col-sm-2 col-md-2 " style="background-color: #0c0c0c;">
+                <a>
+                    <img src="~/Images/logo.png" style="width:65%; height:auto;" onclick="window.location = 'http://gbl.us.com/'" />
+                </a>
+            </div>
+            <div class="col-sm-10 col-md-10 ">
+                <div class="pull-right" style="margin-right: 5px">
+                    <h4>
+                        MÓDULO DE HOTELERÍA
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12" role="main" style="background-color: #F2F2F2">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+<script type="text/javascript">
+        function addimage() {
+          var img = document.createElement("img");
+          img.src = "http://www.google.com.pe";
+          img.height = 50;
+          img.width = 100;
+
+          //optionally set a css class on the image
+          var class_name = "foo";
+          img.setAttribute("class", class_name);
+
+          document.body.appendChild(img);
+        }
+</script>

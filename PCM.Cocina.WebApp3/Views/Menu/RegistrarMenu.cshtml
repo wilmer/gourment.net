@@ -1,0 +1,106 @@
+﻿@model PCE.Cocina.ViewModel.ViewModels.Menu.MenuDTO
+<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+
+
+@*<h5>Detalle de Comprobante</h5>*@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div id="messageRegistroMenu">
+        </div>
+        <div class="form-horizontal">
+            <div id="dori-alert"></div>
+            <form id="frmInsertarDetalle" action="#">
+                <div>
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(model => model.CodigoMenu)
+                    @Html.HiddenFor(model => model.CodigoMenu, new { id = "CodigoMenu", @class = "form-control", @readonly = "readonly" })
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Descripción del Menú:</label>
+                        <div class="col-sm-10">
+                            @Html.TextBoxFor(model => model.DescripcionMenu, new { @class = "form-control certi-limpiar", @id = "DescripcionMenu" })
+                            @Html.ValidationMessageFor(model => model.DescripcionMenu)
+
+                        </div>
+                        @*<div id="id-copy-consultar-ruc">
+                                <div class="col-sm-1">
+                                    <span class="input-group-btn" id="copy-consultar-ruc" style="z-index: 0;">
+                                        <button class="btn btn-sm " type="button" id="aseg-copy" title="">
+                                            <i></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>*@
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Entrada 1:</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(model => model.CodigoEntrada1, Model.ListaCodigoEntrada1, "Seleccione una entrada", new { @class = "form-control", @id = "cbEntrada1" })
+                        </div>
+                        <label class="control-label col-sm-2">Entrada 2:</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(model => model.CodigoEntrada2, Model.ListaCodigoEntrada2, "Seleccione una entrada", new { @class = "form-control", @id = "cbEntrada2" })
+                        </div>
+
+                    </div>
+                    @*<div class="form-group">
+
+                        </div>*@
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Plato de fondo 1:</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(model => model.CodigoPlatoDeFondo1, Model.ListaPlatoDeFondo1, "Seleccione un plato de fondo", new { @class = "form-control", @id = "cbPlatoDeFondo1" })
+                        </div>
+                        <label class="control-label col-sm-2">Plato de fondo 2:</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(model => model.CodigoPlatodeFondo2, Model.ListaPlatoDeFondo2, "Seleccione un plato de fondo", new { @class = "form-control", @id = "cbPlatoDeFondo2" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">Seleccione un refresco:</label>
+                        <div class="col-sm-4">
+                            @Html.DropDownListFor(model => model.CodigoRefresco, Model.ListaCodigoRefresco, "Seleccione un refresco", new { @class = "form-control", @id = "cbRefresco" })
+                        </div>
+                     
+                    </div>
+                    @*<div class="form-group">
+                            <label class="control-label col-sm-2">N° Cuenta Proveedor:</label>
+                            <div class="col-sm-3">
+                                @Html.TextBoxFor(model => model.NumeroCuentaProveedor, new { @class = "form-control certi-limpiar", @id = "txtCantidad" })
+                                @Html.ValidationMessageFor(model => model.NumeroCuentaProveedor)
+                            </div>
+                            <label class="control-label col-sm-2">Importe:</label>
+                            <div class="col-sm-3">
+                                @Html.TextBoxFor(model => model.Importe, new { @class = "form-control certi-limpiar", @id = "txtImporte" })
+                                @Html.ValidationMessageFor(model => model.Importe)
+                            </div>
+                            <div id="id-copy-descuento-soles">
+                                <div class="col-sm-1">
+                                    <span class="input-group-btn" id="copy-descuento-soles" style="z-index: 0;">
+                                        <button class="btn btn-sm " type="button" id="aseg-copy" title="">
+                                            <i>S/</i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>*@
+                 
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    //$(document).ready(function () {
+    //    $('#newFileButton').hide();
+    //    $('#id').hide();
+
+    //    if ($('#Fecha').val() == "") {
+    //        var alert = GenerateAlert("danger", "Si desea agregar un archivo debe ingresar una fecha de Entrega en el documento");
+    //        $('#messageEditarDocumento').empty();
+    //        $('#messageEditarDocumento').append(alert);
+    //    }
+    //})
+</script>
