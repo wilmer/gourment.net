@@ -1,0 +1,142 @@
+﻿@using PCE.Cocina.Service.Lib.Util
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <base href="@Url.Content("~")" />
+    @Styles.Render("~/Content/bbootstrap")
+    @Styles.Render("~/Content/bootstrap-theme")
+    @Styles.Render("~/Content/fontawesome")
+    @Styles.Render("~/Content/custom-css")
+    @Styles.Render("~/Content/datetimepicker")
+    @Styles.Render("~/Content/chosen")
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            @Html.Partial("_HeaderPartial")
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 principal" style="background-color: #F2F2F2" role="main">
+                <!--Menu-->
+
+                <div class="btn-group text-right" role="group">
+                    <div class="btn-group" role="group">
+                        <button class="" btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="cLabel">
+                            <span class="fa fa-navicon"> </span> Menú
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="cLabel">
+
+
+                            <li class="dropdown-submenu" data-menucode="SNSPROSYN_SIN">
+                                <a tabindex="-1" href="#"><span><i class="fa fa-ambulance"></i> Menú</span></a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+
+                                    <li data-menucode="SNSPROSYN_SIN01">
+                                        <a href="@Url.Action(MVC.Menu.ListaMenus())"><i class="fa fa-search"></i> Registrar Menú</a>
+                                    </li>
+
+                                    <li data-menucode="SNSPROSYN_SIN02">
+                                    <a href="@Url.Action(MVC.Pedido.ListarPedidos())"><i class="fa fa-file-o"></i> Registra Pedido </a>
+                                </li>
+
+                                </ul>
+                            </li>
+
+
+                            @*<li class="dropdown-submenu" data-menucode="SNSPROSYN_REP">
+                            <a tabindex="-1" href="#"><span><i class="fa fa-newspaper-o"></i> Reportes</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                <li data-menucode="">
+                                    <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-search"></i> Reporte General</a>
+                                </li>
+                                <li data-menucode="">
+                                    <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-search"></i> Reporte Personalizado</a>
+                                </li>
+                            </ul>
+                        </li>*@
+
+                            @*<li class="dropdown-submenu" data-menucode="SNSPROSYN_REP">
+                            <a tabindex="-1" href="#"><span><i class="fa fa-newspaper-o"></i> Maestros</span></a>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                <li data-menucode="">
+                                    <a href="@Url.Action(MVC.TipoDocumento.Index())"><i class="fa fa-search"></i> Tipo Documento</a>
+                                </li>
+                                <li data-menucode="">
+                                    <a href="@Url.Action(MVC.Familias.Index())"><i class="fa fa-search"></i> Familias</a>
+                                </li>
+                            </ul>
+                        </li>*@
+
+
+                            @*<li class="dropdown-submenu" data-menucode="SNSPROSYN_CFL">
+                            <a href="#"><i class="fa fa-gears"></i> Control de Inventario</a>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+
+                                <li data-menucode="SNSPROSYN_CFL01">
+                                    <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-gear"></i> Ingreso de Productos</a>
+                                </li>
+                            </ul>
+                        </li>*@
+
+                            @*<li class="dropdown-submenu" data-menucode="SNSPROSYN_CFL">
+                            <a href="#"><i class="fa fa-gears"></i> Módulo de Vacaciones</a>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+
+                                <li data-menucode="SNSPROSYN_CFL01">
+                                    <a href="@Url.Action(MVC.Home.Index())"><i class="fa fa-gear"></i> Solicitudes de Vacaciones</a>
+                                </li>
+                            </ul>
+                        </li>*@
+
+                            <li>
+                                <a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out"></i> Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <!--End Menu -->
+
+                <br />
+            </div>
+
+                @RenderBody()
+             
+          </div>
+        </div>
+    </div>
+    <footer>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p class="text-muted">&copy; 2020 Wilmer Romero Ampuero- Derechos reservados - Página optimizada para Firefox y Chrome</p>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/commons")
+    @Scripts.Render("~/bundles/datetimepicker")
+    @Scripts.Render("~/bundles/chosen")
+    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/datetimepicker")
+    @Scripts.Render("~/bundles/chosen")
+    <style type="text/css">
+        div.jtable-main-container table.jtable tbody > tr.jtable-row-selected,
+        div.jtable-main-container table.jtable tbody > tr.jtable-row-selected:hover {
+            background-color: navajowhite;
+        }
+    </style>
+</body>
+</html>

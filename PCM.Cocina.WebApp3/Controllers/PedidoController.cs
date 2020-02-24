@@ -40,7 +40,7 @@ namespace PCM.Cocina.WebApp3.Controllers
             try
             {
 
-                var resultadActualizacion = _pedidoServices.InsertarPedido(Cantidad, cbMenu);
+                var resultadActualizacion = _pedidoServices.InsertarPedido(cbMenu, Cantidad);
                 if (resultadActualizacion.Sucess)
                     return Json(new { Result = "OK" });
                 else

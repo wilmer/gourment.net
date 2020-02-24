@@ -1,0 +1,189 @@
+﻿@model PCE.Cocina.ViewModel.ViewModels.PedidoDTO.PedidoDTO
+@{
+    ViewBag.Title = "Lista de Pedidos";
+}
+<link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+@Styles.Render("~/PedidoIndexStyles")
+@Styles.Render("~/Content/bbootstrap")
+
+
+@*<link href="~/Scripts/jtable/themes/jqueryui/jtable_jqueryui.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/DataTables/css/jquery.dataTables.css" rel="stylesheet" type="text/css" />*@
+
+<style type="text/css">
+    .jtable-goto-page > select {
+        color: #333;
+    }
+
+    .jtable-page-size-change select {
+        color: #333;
+    }
+
+    div.jtable-main-container table.jtable tfoot {
+        background: url('../../lightcolor/bg-tfoot.png') repeat-x scroll top left #dddddd;
+        border-top: 1px solid #C8C8C8;
+        border-bottom: 1px solid #C8C8C8;
+    }
+
+        div.jtable-main-container table.jtable tfoot th {
+            padding: 4px 3px 4px 6px;
+            border-left: 1px solid #fff;
+            border-right: 1px solid #C8C8C8;
+        }
+
+            div.jtable-main-container table.jtable tfoot th:first-child {
+                border-left: none;
+            }
+
+        div.jtable-main-container table.jtable tfoot thth:last-child {
+            border-right: none;
+        }
+</style>
+<script type="text/javascript">
+
+</script>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="lead">Listado de Pedidos</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div>
+            @*<form id="formListaSiniestros" class="form-horizontal">*@
+            @Html.AntiForgeryToken()
+            <div id="huesped-alert"></div>
+            <div class="row">
+                <label class="control-label col-sm-1" for="etapa">Filtrar :</label>
+
+                <div class="col-sm-11">
+                    @Html.TextBoxFor(model => model.Correlativo, htmlAttributes: new { @class = "form-control focus", @id = "txtNombreMenu" })
+
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-bottom: 8px; margin-top: 20px;">
+            </div>
+
+            <div class="row-fluid">
+                <div class="col-sm-12 text-left">
+                    <button id="btnBuscar" type="button" class="btn text-uppercase btn-sm btn-default "><i class="fa fa-search"></i> Buscar</button>
+                    <button id="btnAgregar" type="button" class="btn text-uppercase btn-sm btn-default "><i class="fa fa-refresh"></i> Crear Pedido</button>
+                    @*<button class="btn btn-block btn-alt" id="btnBuscar"><span class="fa fa-search"></span> BUSCAR</button>*@
+                    @*<button id="btnLimpiar" type="button" class="btn text-uppercase btn-sm btn-default "><i class="fa fa-refresh"></i> Limpiar</button>
+                        <button id="btnAgregar" type="button" class="btn text-uppercase btn-sm btn-default "><i class="fa fa-refresh"></i> Agregar</button>
+                        <button id="btnReporte" type="button" class="btn text-uppercase btn-sm btn-default "><i class="fa fa-file-excel-o"></i> Reporte</button>*@
+                </div>
+            </div>
+            @*</form>*@
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div id="tabledatapolizas">
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-huesped" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+                        <h5 class="modal-title" id="myModalLabel">Registrar un pedido</h5>
+                    </div>
+                    <div class="modal-body" id="modal-huesped-body">
+                        <div id="messagePanel">
+                        </div>
+                        <div>
+                            @Html.AntiForgeryToken()
+                            <h4>Huéspedes</h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="modal-dori-ok"><i class="fa fa-check"></i> Aceptar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-huesped-eliminar" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+                        <h5 class="modal-title" id="myModalLabel">Atender la orden</h5>
+                    </div>
+                    <div class="modal-body" id="modal-huesped-body">
+                        <div id="messagePanel">
+                        </div>
+                        <div>
+                            @Html.AntiForgeryToken()
+                            <h4>Pedido</h4>
+                        </div>
+                        <input type="hidden" id="idHuespedEliminar" name="idHuespedEliminar" value="" />
+                        <div>
+                            Esta seguro que desea marcar como atendido la siguente orden?
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="modal-dori-elim-ok"><i class="fa fa-check"></i> SI</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> NO</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Nacionalidades--->
+        <div class="modal fade" id="modal-nacionalidad" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-times"></i></span></button>
+                        <h5 class="modal-title" id="myModalLabel">Agregar un País</h5>
+                    </div>
+                    <div class="modal-body" id="modal-nacionlidad-body">
+                        <div id="messagePanel">
+                        </div>
+                        <div>
+                            @Html.AntiForgeryToken()
+                            <h4>Nacionalidad</h4>
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-2">País:</label>
+                                <div class="col-sm-6">
+                                    @*@Html.TextBoxFor(model => model.Nacionalidad, new { @class = "form-control certi-limpiar", @id = "txtNacionalidadAgregar" })
+                                        @Html.ValidationMessageFor(model => model.Nacionalidad)*@
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="modal-nacionalidad-ok"><i class="fa fa-check"></i> Aceptar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Crud de Nacionalidades--->
+    </div>
+</div>
+@*</div>
+    </div>*@
+@section Scripts {
+    @Scripts.Render("~/PedidoIndexScripts")
+
+}
+
+

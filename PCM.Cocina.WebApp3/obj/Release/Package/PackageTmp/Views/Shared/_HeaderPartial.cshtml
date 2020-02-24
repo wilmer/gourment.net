@@ -1,0 +1,35 @@
+﻿@*<div class="col-sm-2 col-md-2 text-center" style="background-color: #0c0c0c; padding: 0px">
+    <a>
+        <img src="~/Images/logo.png" style="width:65%; padding:5px;height:auto;" onclick="window.location = 'http://gbl.us.com/'" />
+    </a><br />
+
+</div>*@
+<div class="col-sm-10 col-md-12 " style="color: white; background-color: #940930;">
+    <div class="row">
+        <div class="col-sm-8 col-md-8 text-left">
+            MÓDULO DE COCINA
+            <br />
+            
+            <span class="text-uppercase">
+                <strong>
+                    USUARIO : @User.Identity.Name 
+                </strong>
+            </span>
+        </div>
+        <div class="col-sm-4 col-md-4 text-right" ">
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <a href="javascript:document.getElementById('logoutForm').submit()" style="color: white;"><i class=" fa fa-sign-out"></i> Cerrar Sesión</a>
+            }
+        </div>
+    </div>
+    <br>
+    <div class="row" style="margin-bottom: 5px">
+        <div class="col-sm-12 col-md-12 text-right">
+            @ViewBag.Title
+        </div>
+    </div>
+</div>
+
